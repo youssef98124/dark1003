@@ -10,11 +10,11 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '.';
+const prefix = '$';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`By: Roses`,"http://twitch.tv/S-F")
+client.user.setGame(`$play`,"https://www.twitch.tv/dark_legend_1003")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -182,10 +182,10 @@ client.on('message', function(message) {
 	else if (message.content.startsWith(prefix + 'vol')) {
 		if (!message.member.voiceChannel) return message.reply('**Sorry,youre not on a voice channel**');
 		// console.log(args)
-		if (args > 100) return message.reply(':x: **100**');
+		if (args > 10) return message.reply(':x: **10**');
 		if (args < 1) return message.reply(":x: **1**");
-		dispatcher.setVolume(1 * args / 50);
-		message.channel.sendMessage(`Volume Updated To: **${dispatcher.volume*50}**`);
+		dispatcher.setVolume(1 * args / 10);
+		message.channel.sendMessage(`Volume Updated To: **${dispatcher.volume*10}**`);
 	}
 	else if (mess.startsWith(prefix + 'pause')) {
 		if (!message.member.voiceChannel) return message.reply('**Sorry,youre not on a voice channel**');
@@ -302,7 +302,22 @@ client.on('message', function(message) {
 });
 
 
-
+ client.on('message', message => { //ping
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith(prefix + 'ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        let embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setColor('#5016f3')
+                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .addField('**WebSocket:**',api + " ms :signal_strength: ")
+                        .setTimestamp()
+		message.channel.send({embed:embed});
+                        }
+                    });
 
 
 
