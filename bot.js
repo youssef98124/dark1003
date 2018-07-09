@@ -594,56 +594,7 @@ client.on('message', function(message) {
 
 
 
-// Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
 
-// Log our bot in
-
-
-let rebel;
-client.on("ready", async  => {
-    let guild = client.guilds.get("463823539045400588");
-  let users = guild.members.map(member => member.user.id);
-  let i;
-  rebel=0;
-for (i=0 ; i < users.length ; i++) {
- let   check = guild.members.get(users[i]);
-if(!check.voiceChannelID){
-        continue;
-}else{
-  rebel++;
-}
-}
-guild.channels.find('id', '464153203412566018').setName(" Voice「"+rebel+"」");
-  client.setInterval(() =>{
-    let d = Date.now()
-  }, 5000);
-});
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-    let guild = client.guilds.get("463823539045400588");
-let newUserChannel = newMember.voiceChannel
-let oldUserChannel = oldMember.voiceChannel
- if(oldUserChannel === undefined && newUserChannel !== undefined) {
-   rebel++;
-guild.channels.find('id', '464153203412566018').setName(" Voice「"+rebel+"」");
-} else if(newUserChannel === undefined){
-  rebel--;
-guild.channels.find('id', '464153203412566018').setName(" Voice「"+rebel+"」");
-}
-});
-client.on('message', Codes => {
-  
-  if(Codes.content === "-صوت") {
-      Codes.channel.send(" Voice「"+rebel+"」");
-}
-});
 
 
 
@@ -653,7 +604,7 @@ client.on('message', Codes => {
 
 
 	client.on('message', async msg => {
-	var prefix = "--";
+	var prefix = "=";
 	var user = msg.author;
 			var a = msg.guild.roles.find("name", 'Agar');
 		if(!a){
