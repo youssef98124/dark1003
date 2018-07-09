@@ -10,5 +10,5 @@ client.on("ready", () => {
             color : "RANDOM"
         });
     },1000)
-}).login(NDY1OTQ3MzU1NTc3OTc0Nzg1.DiU6zw.mPFuAJf_cicmoeNcZg9kan2l9QA);
+}).login(TOKEN);
   
