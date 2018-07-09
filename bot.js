@@ -1,20 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
 
 
 client.on('ready', async () => {
     console.log(`${client.user.username} has logged in.`);
-    client.user.setActivity('=help|life', {type: 'LISTENING'});
+    client.user.setActivity('=help|SMO', {type: 'LISTENING'});
 });
 
 
