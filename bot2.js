@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 const request = require('request');
-const devs = ['431150885549113344','244423000802328576'];
+const devs = ['460899884581650463','244423000802328576'];
 const child_process = require("child_process");
 const adminprefix = "=";
 const fs = require('fs');
