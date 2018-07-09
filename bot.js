@@ -336,7 +336,7 @@ client.on('message', message => {
 .addField('     **=ban** ' , '**لـ اعطاء بان للعضو** ')
 .addField('     **=bc ** ' ,' ** للبرودكاست ** ')
 .addField('     **=clear** ' , '**لـ مسح الشات** ')
-.addField('للأستفسار أو الرد على أسئلتكم وأفكـــاركم كلمني على الديسكورد ' , '**Mas-Mrzizx#9302**')
+.addField('للأستفسار أو الرد على أسئلتكم وأفكـــاركم كلمني على الديسكورد ' , '**ℓυƒƒу#9896**')
 .addField('**لدعوة البوت للسيرفر ..**' , '**https://discordapp.com/api/oauth2/authorize?client_id=465882397552934932&permissions=8&scope=bot**')
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
