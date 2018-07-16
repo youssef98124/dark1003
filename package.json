@@ -1,10 +1,10 @@
 {
-  "name": "kingserver",
+  "name": "bytetech",
   "version": "2.1.0",
   "description": "-- AWESOMENESS --",
-  "main": "reload.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node reload.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -35,6 +35,6 @@
     "gm": "^1.23.1"
   },
   "engines": {
-    "node": "8.x"
+    "node": "8.4.0"
   }
 }
