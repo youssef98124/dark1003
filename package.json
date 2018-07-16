@@ -30,9 +30,7 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2-3",
     "youtube-info": "^1.2.0",
-    "ytdl-core": "^0.20.3"
-    
-    
+    "ytdl-core": "^0.20.3",
     "gm": "^1.23.1"
   },
   "engines": {
