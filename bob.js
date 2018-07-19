@@ -7,11 +7,11 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '3';
+const prefix = '=';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`3play`,"https://www.twitch.tv/Anime & Games")
+client.user.setGame(`=play`,"https://www.twitch.tv/Music-bot")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -270,4 +270,4 @@ client.on('message', function(message) {
 
 
 
-client.login('NDY5NDM5NjI0Njk2Mjk5NTQw.DjHvWw.q2zvvGCfVWb2IGCihw19XrB7jac');
+client.login('temo');
