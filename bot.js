@@ -270,4 +270,4 @@ client.on('message', function(message) {
 
 
 
-client.login('NDY5NTI5NTY0NDQ4Njg2MDgw.DjJFQw.IzUG_Jds31a90Uoa-96dCZLIwg4');
+client.login('temo');
